@@ -46,7 +46,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.685, 24.838217)
 size = Vector3(50.100002, 32.77, 1)
 
 [node name="ProtoController" parent="." unique_id=567419485 instance=ExtResource("1_o5qli")]
-transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, -0.19999999, 0, -23.6)
+transform = Transform3D(-1, 0, -8.940697e-08, 0, 1, 0, 8.940697e-08, 0, -1, 8.49, 0, -23.6)
 
 [node name="ramp-to-floor2" type="CSGCombiner3D" parent="." unique_id=904529765]
 use_collision = true
