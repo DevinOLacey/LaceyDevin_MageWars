@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://df7xhsvxp2ecc"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_o5qli"]
-[ext_resource type="PackedScene" uid="uid://daak8rsgqvyjv" path="res://scenes/torch_mounted.tscn" id="2_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://daak8rsgqvyjv" path="res://assets/3d_scenes/torch_mounted.tscn" id="2_0wfyh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -83,10 +83,10 @@ operation = 2
 use_collision = true
 size = Vector3(4.98, 2.99, 13.889999)
 
-[node name="torch_mounted2" parent="ramp-to-floor2" unique_id=1988692446 instance=ExtResource("2_0wfyh")]
+[node name="torch_mounted2" parent="ramp-to-floor2" unique_id=1132705754 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.56, 3.6699998, -24.97)
 
-[node name="torch_mounted3" parent="ramp-to-floor2" unique_id=161817943 instance=ExtResource("2_0wfyh")]
+[node name="torch_mounted3" parent="ramp-to-floor2" unique_id=615277329 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.02, 6.6499996, -24.97)
 
 [node name="hidden wall solid" type="CSGBox3D" parent="ramp-to-floor2" unique_id=1431090923]
@@ -134,20 +134,20 @@ operation = 2
 radius = 0.35999998
 rings = 33
 
-[node name="torch_mounted2" parent="Hut1" unique_id=1132705754 instance=ExtResource("2_0wfyh")]
+[node name="torch_mounted2" parent="Hut1" unique_id=1869964255 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.579998, 2.7600002, -3.34)
 
-[node name="torch_mounted3" parent="Hut1" unique_id=1974722219 instance=ExtResource("2_0wfyh")]
+[node name="torch_mounted3" parent="Hut1" unique_id=1379557968 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(-0.1736482, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, -0.1736482, 13.995494, 2.7600002, 10.38712)
 
-[node name="torch_mounted4" parent="Hut1" unique_id=1440847954 instance=ExtResource("2_0wfyh")]
+[node name="torch_mounted4" parent="Hut1" unique_id=463132005 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(-0.1736482, 0, 0.9848077, 0, 1, 0, -0.9848077, 0, -0.1736482, 13.96494, 2.7600002, 17.642654)
 
-[node name="torch_mounted5" parent="Hut1" unique_id=1322495489 instance=ExtResource("2_0wfyh")]
+[node name="torch_mounted5" parent="Hut1" unique_id=1237790753 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(-1.0430813e-07, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -1.0430813e-07, 24.909067, 2.7600002, 15.861025)
 visible = false
 
-[node name="torch_mounted6" parent="Hut1" unique_id=181070730 instance=ExtResource("2_0wfyh")]
+[node name="torch_mounted6" parent="Hut1" unique_id=1687991470 instance=ExtResource("2_0wfyh")]
 transform = Transform3D(-1.0430813e-07, 0, -0.99999994, 0, 1, 0, 0.99999994, 0, -1.0430813e-07, 24.909067, 2.7600002, 10.541025)
 visible = false
 
@@ -158,6 +158,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.048527, 5.54689, 10.24760
 size = Vector3(3.6999998, 10.37, 1)
 
 [node name="FirstFloor" type="CSGCombiner3D" parent="." unique_id=661303775]
+use_collision = true
 
 [node name="Floor" type="CSGBox3D" parent="FirstFloor" unique_id=1295474327]
 use_collision = true
