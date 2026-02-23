@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://b0luedfunh1eg"]
+
+[ext_resource type="PackedScene" uid="uid://cq8uqf8snt3y0" path="res://assets/dungeon_assets/building/wall_doorway.glb" id="1_15o32"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_15o32"]
+size = Vector3(1, 4, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_tjv5p"]
+size = Vector3(4, 1.15, 1)
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_15o32"]
+points = PackedVector3Array(-0.17990112, 0, -0.10002494, -0.06048061, 0.45842305, -0.20004985, 1.4130902, 1.2856303, -0.3867731, 1.8200989, 0, -0.10002494, -0.17990112, 0, 0.09994918, -0.17990112, 2.090226, -0.10002494, -0.06048061, 1.8414985, -0.20004985, 1.4602711, 1.2856303, -0.3679948, 1.7004826, 0.45842305, -0.20004985, 0.18012238, 2.6681674, -0.10002494, 0.2770292, 2.709622, -0.10002494, 0.47965252, 2.7499998, -0.10002494, 1.1603495, 2.7499998, -0.10002494, 1.3629729, 2.709622, -0.10002494, 1.4598796, 2.6681674, -0.10002494, 1.6268725, 2.5567245, -0.10002494, 1.7697856, 2.3427222, -0.10002494, 1.7004826, 1.8414985, -0.20004985, 1.8200989, 0, 0.09994918, 1.6529101, 1.0858946, -0.2510845, 1.8200989, 2.090226, -0.10002494, 1.4130902, 1.2856303, 0.38677305, -0.06048061, 0.45842305, 0.19997412, -0.17990112, 2.090226, 0.09994918, -0.12978366, 2.3427222, -0.10002494, 0.013129413, 2.5567245, -0.10002494, 0.22789058, 2.7002006, -0.05005032, 0.47965252, 2.7499998, 0.09994918, 1.1603495, 2.7499998, 0.09994918, 1.4121114, 2.7002006, -0.05005032, 1.6268725, 2.5567245, 0.09994918, 1.7697856, 2.3427222, 0.09994918, 1.6529101, 1.0858946, 0.25100875, 1.7004826, 0.45842305, 0.19997412, 1.8200989, 2.090226, 0.09994918, 1.4602711, 1.2856303, 0.36791903, 1.7004826, 1.8414985, 0.19997412, 1.4598796, 2.6681674, 0.09994918, 1.3629729, 2.709622, 0.09994918, 0.2770292, 2.709622, 0.09994918, 0.18012238, 2.6681674, 0.09994918, -0.06048061, 1.8414985, 0.19997412, -0.12978366, 2.3427222, 0.09994918, 0.013129413, 2.5567245, 0.09994918, 0.22789058, 2.7002006, 0.04997459, 1.4121114, 2.7002006, 0.04997459)
+
+[node name="Wall_doorway" type="StaticBody3D" unique_id=682559526]
+
+[node name="wall_doorway2" parent="." unique_id=83746881 instance=ExtResource("1_15o32")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, 0.45000002)
+
+[node name="wall_doorway_door" parent="wall_doorway2/wall_doorway" parent_id_path=PackedInt32Array(83746881, 1770082350) index="0" unique_id=1049981241]
+transform = Transform3D(0.17364812, 0, -0.98480767, 0, 1, 0, 0.98480767, 0, 0.17364812, -0.8200989, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=691750104]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4000001, 2, 0.45)
+shape = SubResource("BoxShape3D_15o32")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1019122835]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.5999999, 2, 0.45)
+shape = SubResource("BoxShape3D_15o32")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="." unique_id=1277905081]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.099999905, 3.4250002, 0.45000002)
+shape = SubResource("BoxShape3D_tjv5p")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="." unique_id=1689011623]
+transform = Transform3D(0.17364812, 0, -0.98480767, 0, 1, 0, 0.98480767, 0, 0.17364812, -0.9200989, 0, 0.45000002)
+shape = SubResource("ConvexPolygonShape3D_15o32")
+
+[editable path="wall_doorway2"]

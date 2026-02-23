@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://yhrgdml5x6bh"]
+
+[ext_resource type="PackedScene" uid="uid://c2o8v00doou6r" path="res://assets/dungeon_assets/building/wall.glb" id="1_kw7y5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_a1b4d"]
+size = Vector3(4, 4, 1)
+
+[node name="Wall" type="StaticBody3D" unique_id=46409207]
+
+[node name="wall2" parent="." unique_id=1263415361 instance=ExtResource("1_kw7y5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.1, 0, -0.15)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=437612645]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.099999905, 2, -0.15000011)
+shape = SubResource("BoxShape3D_a1b4d")
