@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bor2jjcb0klu"]
+
+[ext_resource type="PackedScene" uid="uid://csc2slbn4oe18" path="res://assets/dungeon_assets/created_models/health_pack.glb" id="1_4g4kb"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0cpab"]
+size = Vector3(2, 6, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_av78e"]
+size = Vector3(2, 2, 6)
+
+[node name="Health_Pack" type="StaticBody3D" unique_id=1369506755]
+
+[node name="health_pack" parent="." unique_id=1820863546 instance=ExtResource("1_4g4kb")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1457331784]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9604645e-08, 0, 5.9604645e-08)
+shape = SubResource("BoxShape3D_0cpab")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="." unique_id=1823362538]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.9604645e-08, 0, 1.1920929e-07)
+shape = SubResource("BoxShape3D_av78e")
