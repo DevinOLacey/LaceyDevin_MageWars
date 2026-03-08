@@ -7,10 +7,15 @@
 [ext_resource type="PackedScene" uid="uid://rffhjepnc7dj" path="res://assets/3d_scenes/floor_wood.tscn" id="3_tbgi4"]
 [ext_resource type="PackedScene" uid="uid://ciu1niuinfkyo" path="res://assets/3d_scenes/chest_gold.tscn" id="4_85g3d"]
 [ext_resource type="PackedScene" uid="uid://boo3hqaqvy605" path="res://assets/3d_scenes/floor_stone.tscn" id="4_jyhfs"]
+[ext_resource type="PackedScene" uid="uid://cwtjx0e2v4bcj" path="res://assets/3d_scenes/table_medium.tscn" id="5_a8y0u"]
 [ext_resource type="PackedScene" uid="uid://b0luedfunh1eg" path="res://assets/3d_scenes/wall_doorway.tscn" id="6_tefeu"]
 [ext_resource type="PackedScene" uid="uid://du8u2ocl4h6ls" path="res://assets/3d_scenes/wall_corner.tscn" id="9_choun"]
+[ext_resource type="PackedScene" uid="uid://cr5opxtuj75t3" path="res://assets/3d_scenes/chair.tscn" id="9_jbj1t"]
 [ext_resource type="PackedScene" uid="uid://23qr0vqaagrq" path="res://assets/dungeon_assets/building/wall_cracked.glb" id="10_choun"]
-[ext_resource type="PackedScene" uid="uid://csc2slbn4oe18" path="res://assets/dungeon_assets/created_models/health_pack.glb" id="11_ya4ey"]
+[ext_resource type="PackedScene" uid="uid://bvb6du6volwpi" path="res://assets/dungeon_assets/props/plate_food.glb" id="13_jkv2x"]
+[ext_resource type="PackedScene" uid="uid://bvevjkm7idwte" path="res://assets/dungeon_assets/props/keyring.glb" id="14_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://bor2jjcb0klu" path="res://assets/3d_scenes/health_pack.tscn" id="16_jbj1t"]
+[ext_resource type="PackedScene" uid="uid://b7jscd6kospdi" path="res://assets/3d_scenes/crates_stacked.tscn" id="16_muem4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0xm2m"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -25,44 +30,6 @@ sky = SubResource("Sky_h2yge")
 ambient_light_sky_contribution = 0.25
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="Animation" id="Animation_ya4ey"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector3(0, 6.2831855, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_eb6dy"]
-resource_name = "rotation"
-length = 5.0
-loop_mode = 1
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 0,
-"values": [Vector3(0, 0, 0), Vector3(0, 6.2831855, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_trceg"]
-_data = {
-&"RESET": SubResource("Animation_ya4ey"),
-&"rotation": SubResource("Animation_eb6dy")
-}
 
 [node name="Main" type="Node3D" unique_id=716359445]
 
@@ -934,6 +901,45 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.490005, 10.679999, 18.8099
 [node name="Floor_Stone81" parent="SecondFloor/Ceiling" unique_id=455122739 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.490005, 10.679999, 22.809998)
 
+[node name="Floor_Stone98" parent="SecondFloor/Ceiling" unique_id=253392517 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23.259998, 10.679999, 26.709997)
+
+[node name="Floor_Stone108" parent="SecondFloor/Ceiling" unique_id=2139411541 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19.279997, 10.679999, 26.709997)
+
+[node name="Floor_Stone109" parent="SecondFloor/Ceiling" unique_id=544424946 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -15.309997, 10.679999, 26.709997)
+
+[node name="Floor_Stone137" parent="SecondFloor/Ceiling" unique_id=1066404402 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.319996, 10.679999, 26.709997)
+
+[node name="Floor_Stone138" parent="SecondFloor/Ceiling" unique_id=404874018 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.3399954, 10.679999, 26.709997)
+
+[node name="Floor_Stone139" parent="SecondFloor/Ceiling" unique_id=1910842458 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.3799968, 10.679999, 26.709997)
+
+[node name="Floor_Stone140" parent="SecondFloor/Ceiling" unique_id=323649906 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.59000355, 10.679999, 26.709997)
+
+[node name="Floor_Stone141" parent="SecondFloor/Ceiling" unique_id=39487967 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.580004, 10.679999, 26.709997)
+
+[node name="Floor_Stone142" parent="SecondFloor/Ceiling" unique_id=462988864 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.560005, 10.679999, 26.709997)
+
+[node name="Floor_Stone143" parent="SecondFloor/Ceiling" unique_id=1478934287 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.550002, 10.679999, 26.709997)
+
+[node name="Floor_Stone144" parent="SecondFloor/Ceiling" unique_id=1914656889 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.520004, 10.679999, 26.709997)
+
+[node name="Floor_Stone145" parent="SecondFloor/Ceiling" unique_id=1369934242 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.510002, 10.679999, 26.709997)
+
+[node name="Floor_Stone146" parent="SecondFloor/Ceiling" unique_id=932519410 instance=ExtResource("4_jyhfs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.490005, 10.679999, 26.709997)
+
 [node name="Floor_Stone82" parent="SecondFloor/Ceiling" unique_id=303345588 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.550002, 10.679999, -13.130001)
 
@@ -1006,6 +1012,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.490005, 10.679999, -1.1600
 [node name="Floor_Stone101" parent="SecondFloor/Ceiling" unique_id=40383655 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 24.490005, 10.679999, 2.8399978)
 
+[node name="Table_Medium" parent="SecondFloor/Ceiling" unique_id=1191294752 instance=ExtResource("5_a8y0u")]
+transform = Transform3D(-2.7, 2.360415e-07, -2.360415e-07, -2.360415e-07, -2.7, 0, -2.360415e-07, 2.0635403e-14, 2.7, 12.290188, 21.430002, 4.460483)
+
 [node name="Hut1" type="Node3D" parent="." unique_id=2134155174]
 metadata/_edit_lock_ = true
 
@@ -1045,36 +1054,24 @@ transform = Transform3D(-1.1802075e-07, 0, -2.7, 0, 2.7, 0, 2.7, 0, -1.1802075e-
 [node name="Wall_Corner2" parent="Hut1" unique_id=1989785295 instance=ExtResource("9_choun")]
 transform = Transform3D(-2.7, 0, 2.360415e-07, 0, 2.7, 0, -2.360415e-07, 0, -2.7, -18.84, 0, 10.969996)
 
+[node name="Chair" parent="Hut1" unique_id=2040518676 instance=ExtResource("9_jbj1t")]
+transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, -6.88, 0.1, 2.5800002)
+
+[node name="Chair2" parent="Hut1" unique_id=558559807 instance=ExtResource("9_jbj1t")]
+transform = Transform3D(-2.5371702, 0, -0.9234546, 0, 2.7, 0, 0.9234546, 0, -2.5371702, -15.427655, 0.1, 2.833717)
+
 [node name="HiddenWalls" type="Node3D" parent="." unique_id=1030382966]
 metadata/_edit_lock_ = true
 
 [node name="wall_cracked2" parent="HiddenWalls" unique_id=680699110 instance=ExtResource("10_choun")]
 transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, -23.140001, 0.1, 11.04)
 
-[node name="FirstFloorDecor" type="Node3D" parent="." unique_id=1807967780]
-metadata/_edit_lock_ = true
-
-[node name="Pillar" parent="FirstFloorDecor" unique_id=1435276328 instance=ExtResource("3_sugp2")]
-transform = Transform3D(2.5680003, 0, 0, 0, 2.5680003, 0, 0, 0, 2.5680003, 18.17, 0.5, -18.199999)
-
-[node name="Pillar3" parent="FirstFloorDecor" unique_id=1259693194 instance=ExtResource("3_sugp2")]
-transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, -20.383198, -0.013600051, -6.1947994)
-
-[node name="Pillar4" parent="FirstFloorDecor" unique_id=1919041721 instance=ExtResource("3_sugp2")]
-transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, -19.303198, -0.013600051, -19.154799)
-
-[node name="Torch_Mounted" parent="FirstFloorDecor" unique_id=1658319596 instance=ExtResource("2_0wfyh")]
-transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18.050001, 3.8799999, 5.119999)
-
-[node name="Torch_Mounted2" parent="FirstFloorDecor" unique_id=1219069011 instance=ExtResource("2_0wfyh")]
-transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 16.76, 3.8799999, -18.410002)
-
 [node name="First_Floor" type="Node3D" parent="." unique_id=840723737]
 metadata/_edit_lock_ = true
 
 [node name="Floor" type="Node3D" parent="First_Floor" unique_id=2062681386]
 
-[node name="Floor_Stone" parent="First_Floor/Floor" unique_id=253392517 instance=ExtResource("4_jyhfs")]
+[node name="Floor_Stone" parent="First_Floor/Floor" unique_id=308534740 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.899998, 0, -22.969997)
 metadata/_edit_lock_ = true
 
@@ -1812,6 +1809,30 @@ transform = Transform3D(2.0384434e-07, 0, -2.7, 0, 2.7, 0, 2.7, 0, 2.0384434e-07
 [node name="Wall14" parent="First_Floor/Wall" unique_id=167472647 instance=ExtResource("3_o6xl0")]
 transform = Transform3D(2.0384434e-07, 0, -2.7, 0, 2.7, 0, 2.7, 0, 2.0384434e-07, -26.420002, 0.05, -22.619999)
 
+[node name="FirstFloorDecor" type="Node3D" parent="First_Floor" unique_id=1807967780]
+metadata/_edit_lock_ = true
+
+[node name="Pillar" parent="First_Floor/FirstFloorDecor" unique_id=1435276328 instance=ExtResource("3_sugp2")]
+transform = Transform3D(2.5680003, 0, 0, 0, 2.5680003, 0, 0, 0, 2.5680003, 18.17, 0.5, -18.199999)
+
+[node name="Pillar3" parent="First_Floor/FirstFloorDecor" unique_id=1259693194 instance=ExtResource("3_sugp2")]
+transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, -20.383198, -0.013600051, -6.1947994)
+
+[node name="Pillar4" parent="First_Floor/FirstFloorDecor" unique_id=1919041721 instance=ExtResource("3_sugp2")]
+transform = Transform3D(2.7, 0, 0, 0, 2.7, 0, 0, 0, 2.7, -19.303198, -0.013600051, -19.154799)
+
+[node name="Torch_Mounted" parent="First_Floor/FirstFloorDecor" unique_id=1658319596 instance=ExtResource("2_0wfyh")]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, -18.050001, 3.8799999, 5.119999)
+
+[node name="Torch_Mounted2" parent="First_Floor/FirstFloorDecor" unique_id=1219069011 instance=ExtResource("2_0wfyh")]
+transform = Transform3D(1.3113416e-07, 0, -1, 0, 1, 0, 1, 0, 1.3113416e-07, 16.76, 3.8799999, -18.410002)
+
+[node name="keyring2" parent="First_Floor/FirstFloorDecor" unique_id=877798883 instance=ExtResource("14_jbj1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.1, 2.8, 0.90000004)
+
+[node name="plate_food" parent="First_Floor/FirstFloorDecor" unique_id=873705957 instance=ExtResource("13_jkv2x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.200001, 2.7, 3.3000002)
+
 [node name="Ramp" type="Node3D" parent="." unique_id=19471450]
 metadata/_edit_lock_ = true
 
@@ -1912,9 +1933,8 @@ transform = Transform3D(5.9604645e-08, 0.9999998, -2.9802322e-08, -0.34202012, -
 [node name="Floor_Stone16" parent="Ramp/RampWall" unique_id=1596384618 instance=ExtResource("4_jyhfs")]
 transform = Transform3D(5.9604645e-08, 0.9999998, -2.9802322e-08, -0.34202012, -1.49011585e-08, -0.9396925, -0.9396925, 1.4901161e-08, 0.34202006, -21.213284, 1.164058, -20.02507)
 
-[node name="health_pack" parent="." unique_id=1820863546 instance=ExtResource("11_ya4ey")]
-transform = Transform3D(0.30000004, 0, 5.245367e-08, 0, 0.3, 0, -5.245367e-08, 0, 0.30000004, 0.73685265, 14.625544, -4.340749)
+[node name="Crates_Stacked" parent="." unique_id=55898173 instance=ExtResource("16_muem4")]
+transform = Transform3D(2.7, 0, 5.9604645e-08, 0, 2.7, 0, -5.9604645e-08, 0, 2.7, 23.464062, 11.610003, -21.403013)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="health_pack" unique_id=1721101154]
-libraries/ = SubResource("AnimationLibrary_trceg")
-autoplay = &"rotation"
+[node name="Health_Pack" parent="." unique_id=1369506755 instance=ExtResource("16_jbj1t")]
+transform = Transform3D(0.4, 0, 6.9938224e-08, 0, 0.4, 0, -6.9938224e-08, 0, 0.4, 0.74999964, 15.190001, -4.3399997)
