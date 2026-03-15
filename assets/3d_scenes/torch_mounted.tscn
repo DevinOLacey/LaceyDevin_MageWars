@@ -92,9 +92,46 @@ billboard_keep_scale = true
 material = SubResource("StandardMaterial3D_u677w")
 size = Vector2(0.28, 0.36)
 
+[sub_resource type="Gradient" id="Gradient_jofqf"]
+colors = PackedColorArray(0.7496438, 0.22936338, 0.07851281, 1, 0.48436016, 0.20630908, 0, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_5fsta"]
+gradient = SubResource("Gradient_jofqf")
+
+[sub_resource type="Curve" id="Curve_jofqf"]
+_limits = [0.0, 5.0, 0.0, 1.0]
+_data = [Vector2(0.5249042, 5), 0.0, 0.0, 0, 0]
+point_count = 1
+
+[sub_resource type="CurveTexture" id="CurveTexture_jofqf"]
+curve = SubResource("Curve_jofqf")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_f6aby"]
+lifetime_randomness = 0.3
+emission_shape = 1
+emission_sphere_radius = 0.4
+angle_min = -720.0
+angle_max = 720.0
+initial_velocity_max = 0.099999994
+gravity = Vector3(0, -0.1, 0)
+scale_min = 0.0
+scale_max = 0.03
+color = Color(0.6013348, 0.25763455, 1.92523e-07, 1)
+color_initial_ramp = SubResource("GradientTexture1D_5fsta")
+emission_curve = SubResource("CurveTexture_jofqf")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_d5jaj"]
+blend_mode = 1
+shading_mode = 0
+vertex_color_use_as_albedo = true
+detail_blend_mode = 1
+
+[sub_resource type="SphereMesh" id="SphereMesh_hqrxc"]
+material = SubResource("StandardMaterial3D_d5jaj")
+
 [node name="Torch_Mounted" type="StaticBody3D" unique_id=1517173155]
 
-[node name="torch_mounted2" parent="." unique_id=1900345121 instance=ExtResource("1_btkf2")]
+[node name="torch_mounted2" parent="." unique_id=2109204253 instance=ExtResource("1_btkf2")]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1273856320]
 shape = SubResource("ConvexPolygonShape3D_5uqnx")
@@ -105,6 +142,7 @@ light_color = Color(0.7419236, 0.42268232, 0.06980045, 1)
 light_energy = 2.0
 shadow_enabled = true
 omni_range = 15.0
+omni_attenuation = 2.0
 
 [node name="FireParticles" type="GPUParticles3D" parent="." unique_id=1396100713]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.54, 0.35999998)
@@ -122,5 +160,12 @@ lifetime = 0.84
 fixed_fps = 0
 process_material = SubResource("ParticleProcessMaterial_78rf8")
 draw_pass_1 = SubResource("QuadMesh_uvyu3")
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="." unique_id=1610814383]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0.35000002)
+amount = 4
+lifetime = 2.0
+process_material = SubResource("ParticleProcessMaterial_f6aby")
+draw_pass_1 = SubResource("SphereMesh_hqrxc")
 
 [editable path="torch_mounted2"]
